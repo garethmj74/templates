@@ -24,7 +24,10 @@ These plugins come from the Anthropic catalogue marketplace (`knowledge-work-plu
 4. Re-run the dry run after each sync to confirm no v1 endpoints return.
 
 ## Known limitations
-- Tested on a copy of the synced plugins only. Not yet tested against a live v2 sign-in.
+- Tested on copies of the synced plugins only. The scripts have not been run against live org plugin installs.
+- The claude.ai Atlassian connector sign-in was checked on 25 November 2026 (v2 toolset, site reachable). The patched plugin `.mcp.json` entries have not been signed in yet; test after the `-daemon` plugins are published.
+- Publishing to the organisation is not offered in cloud sessions. It must be done from a computer or the Claude app.
+- Five of the 12 plugins (design, engineering, human-resources, operations, product-legal) ship no licence file, so patched copies are built locally and not stored in this repository.
 - Does not change plugin settings stored server-side.
 
 ## Document Provenance
