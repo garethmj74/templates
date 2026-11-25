@@ -17,7 +17,7 @@ These plugins come from the Anthropic catalogue marketplace (`knowledge-work-plu
 ## Steps
 1. Local machines and Claude Code installs, run in a terminal:
    `./migrate.sh` (dry run), then `./migrate.sh --apply`. It verifies that no v1 references remain.
-2. Org-wide, an organisation admin should do one of the following:
+2. Org-wide (you are admin): run `./build-patched-plugins.sh <new-empty-folder>` on your own computer. It creates 12 patched `<plugin>-daemon` folders from your synced copies. In Claude Code on that computer, ask it to publish each folder to the organisation (publishing is not offered in cloud sessions). Then approve, install for everyone and hide the originals as below. Alternatives:
    - Publish an org-owned copy of each affected plugin with the patched `.mcp.json` (run the script on the plugin source), set it to "installed" and hide the catalogue versions.
    - Raise the v1 endpoints with Anthropic as a catalogue defect.
 3. Users re-authenticate Atlassian once (`/mcp`) after the endpoint changes.
